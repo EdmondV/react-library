@@ -1,0 +1,236 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+input {
+  width: 130px;
+  height: 15px;
+  border-radius: 5px;
+  outline: none;
+  padding: 0 10px;
+}
+
+button {
+  margin: 2px;
+}
+
+.app {
+  position: fixed;
+  overflow: scroll;
+  width: 100%;
+  height: 100%;
+  background-color: #2A363B;
+  overflow: scroll;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 20px;
+}
+
+.aside {
+  width: 200px;
+  padding: 20px;
+  margin-left: 50px;
+  border-radius: 5px;
+  border: 1px solid black;
+  height: 270px;
+}
+
+.aside div {
+  padding: 5px;
+}
+
+.aside p {
+  margin: 0;
+  margin-left: 5px;
+  color: red;
+}
+
+.right-block {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+
+.modules {
+  width: 100%;
+  min-height: 50px;
+  display: flex;
+  flex-direction: row;
+}
+
+.module {
+  padding-top: 15px;
+  width: 45%;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin-left: 2px;
+  max-height: 90px;
+  margin-right: 2px;
+}
+
+.module span {
+  margin-left: 20px;
+}
+
+.module input {
+  margin-left: 20px;
+}
+
+.module button {
+  margin-left: 20px;
+}
+
+.module div {
+  display: inline-block;
+}
+
+.btn_up:after {
+  content: '\2191';
+}
+
+.btn_down:after {
+  content: '\2193';
+}
+
+.search-module div {
+  padding: 20px;
+}
+
+.search-module div input {
+  outline: none;
+}
+
+.books-list {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+
+.book-card {
+  width: 45%;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin: 2px;
+  height: 160px;
+}
+
+.book-card:hover {
+  background-color: #EB4A5F;
+}
+
+.book-card_content {
+  padding: 10px 20px;
+}
+
+.hidden {
+  display: none;
+}
+
+.book-buttons img {
+  padding: 2px;
+  margin-left: 20px;
+  height: 25px;
+  border: 1px solid black;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #EB4A5F;
+}
+
+.book-buttons img:hover {
+  background-color: #FF847C;
+}
+
+.books-list_modal {
+  position: relative;
+  top: 100px;
+  width: 300px;
+  height: 150px;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin: 0 auto;
+  padding: 10px;
+  outline: none;
+}
+
+.books-list-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.red-button {
+  width: 45%;
+  height: 30px;
+  background-color: red;
+  border-radius: 5px;
+  outline: none;
+}
+
+.green-button {
+  width: 45%;
+  height: 30px;
+  background-color: green;
+  border-radius: 5px;
+  outline: none;
+}
+
+@media only screen and (max-width: 1000px) {
+  .app {
+    position: fixed;
+    overflow: scroll;
+    width: 100%;
+    height: 100%;
+    background-color: #2A363B;
+    overflow: scroll;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 0px;
+    font-size: 10pt;
+  }
+  .aside {
+    width: 100%;
+    border-radius: 5px;
+    margin-left: 0;
+    border: 1px solid black;
+    min-height: 270px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+	}
+  .modules {
+    width: 100%;
+    min-height: 90px;
+    display: flex;
+    flex-direction: row;
+  }
+  .module {
+    width: 50%;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-left: 2px;
+    min-height: 70px;
+    margin-right: 2px;
+  }
+  .book-list {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
+  }
+  .book-card {
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 2px;
+    height: 160px;
+  }
+}
