@@ -1,15 +1,8 @@
 import React from 'react'
 import Input from '../common/input'
+import { removeClass, addClass } from '../helpers/class-helper'
 
 const SearchModule = ({ books }) => {
-
-  const removeClass = (selector, id) => {
-    document.querySelector(`${selector}${id}`).classList.remove('hidden')
-  }
-
-  const addClass = (selector, id) => {
-    document.querySelector(`${selector}${id}`).classList.add('hidden')
-  }
 
   const searchInfo = (data) => {
     books.filter((book, i) => {

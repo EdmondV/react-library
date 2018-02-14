@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import RequestsActions from '../reducers/request'
+import { sortBooks } from '../helpers/sort-helper'
 import BooksList from './books-list'
 import Aside from './aside'
 import LibraryModal from './library-modal'
@@ -9,16 +10,6 @@ import SortModule from './sort-module'
 import Button from '../common/button'
 import Input from '../common/input'
 import '../style/main.css'
-
-const sortBooks = (field, order='asc') => {
-  return function compareBooks(eventA, eventB) {
-    let sorted = []
-    order === 'asc'
-    ? sorted = eventA[field].toLowerCase() > eventB[field].toLowerCase()
-    : sorted = eventA[field].toLowerCase() < eventB[field].toLowerCase()
-    return sorted
-  }
-}
 
 const Main = ({
   books,

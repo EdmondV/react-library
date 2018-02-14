@@ -4,7 +4,7 @@ import Button from '../common/button'
 
 const FilterModule = ({ titleSort, updateState, sortObj }) => {
 
-  const sort = (field, type) => {
+  const cooseSort = (field, type) => {
     switch (type) {
       case null:
         updateState({ sortObj: { field: field, type: 'asc' } })
@@ -40,10 +40,10 @@ const FilterModule = ({ titleSort, updateState, sortObj }) => {
       <span>Сортировать:</span>
       <Button
         className={authorArrowClasses}
-        onClick={() => sort('author', sortObj.type)}>По автору</Button>
+        onClick={() => cooseSort('author', sortObj.type)}>По автору</Button>
       <Button
         className={titleArrowClasses}
-        onClick={() => sort('title', sortObj.type)}>По названию</Button>
+        onClick={() => cooseSort('title', sortObj.type)}>По названию</Button>
     </div>
   )
 }

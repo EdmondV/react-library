@@ -1,7 +1,7 @@
 {
   "name": "edmond",
   "version": "1.0.0",
-  "description": "events",
+  "description": "library",
   "main": "index.js",
   "scripts": {
     "build": "set NODE_ENV=production&& webpack --progress",
@@ -37,7 +37,6 @@
     "react-dom": "^16.2.0",
     "react-redux": "^5.0.6",
     "react-router": "^4.2.0",
-    "redux": "^3.7.2",
-    "whatwg-fetch": "^2.0.3"
+    "redux": "^3.7.2"
   }
 }

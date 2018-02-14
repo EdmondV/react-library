@@ -1,12 +1,5 @@
 import React from 'react'
-
-const removeClass = (selector, id) => {
-  document.querySelector(`${selector}${id}`).classList.remove('hidden')
-}
-
-const addClass = (selector, id) => {
-  document.querySelector(`${selector}${id}`).classList.add('hidden')
-}
+import { removeClass, addClass } from '../helpers/class-helper'
 
 const BookCard = ({ book, updateState, id }) => {
   return (
@@ -14,7 +7,7 @@ const BookCard = ({ book, updateState, id }) => {
       className='book-card'
       id={`card_${id + book.pages}`}
       onMouseEnter={() => removeClass('#test_', id)}
-      onMouseLeave={() => addClass('#test_',id)} >
+      onMouseLeave={() => addClass('#test_',id)}>
       <div className='book-card_content'>
         <h1 className='book-name'>{book.title}</h1>
         <span className='book-author'>Автор: {book.author}</span>

@@ -24,9 +24,9 @@ class Aside extends Component {
     }
   }
 
-  changeObjectProp (data, value) {
-    Object.getOwnPropertyNames(data).forEach((val, i) => {
-      this.setState({ [val]: typeof value === 'string' ? value : data[val] })
+  changeObjectProp (data) {
+    Object.getOwnPropertyNames(data).forEach((val) => {
+      this.setState({ [val]: data[val] })
     })
   }
 
@@ -40,11 +40,11 @@ class Aside extends Component {
     let titleValid = this.state.titleValid
     switch(fieldName) {
       case 'title':
-        titleValid = value.length >= 6
+        titleValid = value.length >= 2
         fieldValidationErrors[fieldName] = titleValid ? '': `${fieldName} is too short`
         break
       case 'author':
-        authorValid = value.length >= 6
+        authorValid = value.length >= 2
         fieldValidationErrors[fieldName] = authorValid ? '': `${fieldName} is too short`
         break
     }
